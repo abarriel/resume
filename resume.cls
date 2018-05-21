@@ -37,7 +37,7 @@
 {}
 
 \newcommand{\datedsubsection}[2]{%
-\subsection[#1]{#1 \hfill #2}%
+\subsection[#1]{\textbf{#1} \hfill #2}%
 }
 
 \newcommand{\name}[1]{
