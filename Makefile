@@ -12,9 +12,9 @@ $(RESUME): $(SRC)
 	$(CC) -jobname=$(subst .pdf,,$@) resume.tex
 
 clean:
-	$(RM) *.aux *.log *.toc *.out *.fls *.fdb_latexmk
+	$(RM) *.aux *.log *.toc *.out *.fls *.fdb_latexmk *.synctex.gz
 
 fclean: clean
-	$(RM) $(SHORT) $(LONG)
+	$(RM) $(RESUME)
 
 re: fclean all

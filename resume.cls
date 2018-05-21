@@ -31,11 +31,6 @@
 {}                           % Can be used to insert code before the heading
 [\titlerule]                 % Inserts a horizontal line after the heading
 
-% Customize \subsection
-% \titleformat{\subsection}
-% {\large\bfseries\raggedright}
-% {}{0em}
-% {}
 \titleformat{\subsection}
 {\large\scshape\raggedright}
 {}{0em}
