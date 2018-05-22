@@ -37,7 +37,7 @@
 {}
 
 \newcommand{\datedsubsection}[2]{%
-\subsection[#1]{\textbf{#1} \hfill #2}%
+\subsection[#1]{\textbf{#1} \hfill \normalsize\textbf{#2}}%
 }
 
 \newcommand{\name}[1]{
@@ -56,13 +56,15 @@
 #1 \\
 }
 
-\renewcommand\labelitemi{$\cdot$}
+\renewcommand\labelitemi{$\textendash$}
+\newcommand{\graphicslink}[2] {\href{#2}{\includegraphics[width=30mm]{#1}}}
+
 \newcommand{\workitems}[4]{
     \renewcommand\labelitemi{}
     \begin{itemize}
         \item \color{red}\large{\faEnvelope} {\href{mailto:#1}{\texttt{#1}}}
-        \item \color{grey}\large{\faGithub} {\url{#2}}
-        \item \color{blue}\large{\faLinkedin} {\url{#3}}
+        \item \color{grey}\large{\faGithub} {\href{https://www.#2}{#2}}
+        \item \color{blue}\large{\faLinkedin} {\href{https://www.#3}{#3}}
         \item \color{OliveGreen}\large{\faPhone} {\texttt{#4}}
     \end{itemize}
 }
