@@ -2,6 +2,10 @@
 \ProvidesClass{resume}[2018/05/21 resume]
 
 \LoadClass{article}
+% % UTF8
+% \RequirePackage[utf8]{inputenc}
+% \RequirePackage[T1]{fontenc}
+% \RequirePackage[frenchb]{babel}
 
 \RequirePackage{titlesec} % For neater titles
 \RequirePackage{geometry} % For page layout
@@ -57,7 +61,7 @@
 }
 
 \renewcommand\labelitemi{$\textendash$}
-\newcommand{\graphicslink}[2] {\href{#2}{\includegraphics[width=30mm]{#1}}}
+\newcommand{\graphicslink}[2] {\href{#2}{\includegraphics[width=25mm]{#1}}}
 
 \newcommand{\workitems}[4]{
     \renewcommand\labelitemi{}
