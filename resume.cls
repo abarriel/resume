@@ -3,9 +3,9 @@
 
 \LoadClass{article}
 % % UTF8
-% \RequirePackage[utf8]{inputenc}
-% \RequirePackage[T1]{fontenc}
-% \RequirePackage[frenchb]{babel}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage[frenchb]{babel}
 
 \RequirePackage{titlesec} % For neater titles
 \RequirePackage{geometry} % For page layout
@@ -41,7 +41,7 @@
 {}
 
 \newcommand{\datedsubsection}[2]{%
-\subsection[#1]{\textbf{#1} \hfill \normalsize\textbf{#2}}%
+\subsection[#1]{\textbf{#1} \hfill \small\textbf{#2}}%
 }
 
 \newcommand{\name}[1]{
@@ -61,7 +61,7 @@
 }
 
 \renewcommand\labelitemi{$\textendash$}
-\newcommand{\graphicslink}[2] {\href{#2}{\includegraphics[width=25mm]{#1}}}
+\newcommand{\graphicslink}[2] {\href{#2}{\includegraphics[width=27mm]{#1}}}
 
 \newcommand{\workitems}[4]{
     \renewcommand\labelitemi{}

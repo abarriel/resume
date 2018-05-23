@@ -9,8 +9,10 @@ CC		=	pdflatex
 all: $(RESUME)
 
 $(RESUME): $(SRC)
-	$(CC) -jobname=$(subst .pdf,,$@) resume.tex
+	$(CC) -jobname=$(subst .pdf,,$@) short.tex
 
+long: $(SRC)
+	$(CC) -jobname=lresume long.tex
 clean:
 	$(RM) *.aux *.log *.toc *.out *.fls *.fdb_latexmk *.synctex.gz
 
