@@ -10,7 +10,7 @@
       devShells = forAllSystems (system:
         let pkgs = nixpkgs.legacyPackages.${system}; in {
           default = pkgs.mkShell {
-            buildInputs = [ pkgs.texliveFull pkgs.poppler_utils ];
+            buildInputs = [ pkgs.texliveFull pkgs.poppler-utils ];
           };
         }
       );
