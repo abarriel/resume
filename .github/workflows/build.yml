@@ -1,0 +1,30 @@
+name: Build Resume
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: cachix/install-nix-action@v27
+
+      - name: Build PDF
+        run: |
+          nix-shell -p texliveFull --run "pdflatex -interaction=nonstopmode -jobname=resume short.tex"
+          nix-shell -p texliveFull --run "pdflatex -interaction=nonstopmode -jobname=resume short.tex"
+
+      - name: Generate preview PNGs
+        run: |
+          nix-shell -p poppler_utils --run "pdftoppm -png -r 200 resume.pdf images/resume-preview"
+
+      - name: Commit artifacts
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add resume.pdf images/resume-preview-*.png
+          git diff --cached --quiet || git commit -m "[CI] rebuild resume PDF and preview PNGs"
+          git push
