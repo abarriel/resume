@@ -10,7 +10,7 @@
 \RequirePackage{titlesec} % For neater titles
 \RequirePackage{geometry} % For page layout
 \RequirePackage{fontawesome} % For icons
-\RequirePackage{hyperref} % For links
+\RequirePackage[hidelinks]{hyperref} % For links
 \RequirePackage[dvipsnames]{xcolor} % For colors
 \RequirePackage{graphicx} % For images
 \pagenumbering{gobble} % Remove page numbering
