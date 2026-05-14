@@ -5,7 +5,7 @@
 % % UTF8
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
-\RequirePackage[frenchb]{babel}
+\RequirePackage[french]{babel}
 
 \RequirePackage{titlesec} % For neater titles
 \RequirePackage{geometry} % For page layout
