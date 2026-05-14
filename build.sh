@@ -1,6 +1,4 @@
-#!/usr/bin/env nix-shell
-#! nix-shell -i bash -p texliveFull poppler_utils
-
+#!/usr/bin/env bash
 set -euo pipefail
 
 echo "Building resume PDF..."

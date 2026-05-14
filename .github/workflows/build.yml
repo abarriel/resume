@@ -11,15 +11,12 @@ jobs:
       - uses: actions/checkout@v4
 
       - uses: cachix/install-nix-action@v27
+        with:
+          extra_nix_config: |
+            experimental-features = nix-command flakes
 
-      - name: Build PDF
-        run: |
-          nix-shell -p texliveFull --run "pdflatex -interaction=nonstopmode -jobname=resume short.tex"
-          nix-shell -p texliveFull --run "pdflatex -interaction=nonstopmode -jobname=resume short.tex"
-
-      - name: Generate preview PNGs
-        run: |
-          nix-shell -p poppler_utils --run "pdftoppm -png -r 200 resume.pdf images/resume-preview"
+      - name: Build PDF and generate previews
+        run: nix develop --command bash build.sh
 
       - name: Commit artifacts
         run: |
