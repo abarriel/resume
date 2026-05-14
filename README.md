@@ -1,1 +1,1 @@
-<p style="text-align: center;"><a href="https://abarriel.github.io/resume/resume.pdf">My Resume</a></p>
+<p style="text-align: center;"><a href="https://raw.githubusercontent.com/abarriel/resume/master/resume.pdf">My Resume (PDF)</a></p>
